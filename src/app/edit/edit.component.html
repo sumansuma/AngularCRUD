@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md">
+        <h4>Update User Details</h4>
+    </div>
+</div>
+<form [formGroup]="editForm" (ngSubmit) ="onSave()">
+    <div class="jumbotron col-sm-8" style="margin:auto">
+        <div class="form-group row">
+            <div class="col-md-2">
+                <label class="col-form-label">Id</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" formControlName="id" readonly>
+                <div *ngIf=" formSubmitted && editForm.get('id').errors"  class="invalid-error">
+                    <div *ngIf="editForm.get('id').errors.required">Id is required</div>
+                  </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
+                <label class="col-form-label">Name</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" formControlName="name">
+                <div *ngIf=" formSubmitted && editForm.get('name').errors"  class="invalid-error">
+                    <div *ngIf="editForm.get('name').errors.required">Name is required</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-2">
+                <label class="col-form-label">Email</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" formControlName="email">
+                <div *ngIf=" formSubmitted && editForm.get('email').errors"  class="invalid-error">
+                    <div *ngIf="editForm.get('email').errors.required">Email is required</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-2">
+                <label class="col-form-label">Phone</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" formControlName="phone">
+                <div *ngIf=" formSubmitted && editForm.get('phone').errors"  class="invalid-error">
+                    <div *ngIf="editForm.get('phone').errors.required">phone is required</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-2">
+                <label class="col-form-label">City</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" formControlName="city">
+                <div *ngIf=" formSubmitted && editForm.get('city').errors"  class="invalid-error">
+                    <div *ngIf="editForm.get('city').errors.required">city is required</div>
+                  </div>
+            </div>
+        </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">&nbsp;</label>
+      <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary fa fa-floppy-o">&nbsp;Save</button>&nbsp;
+          <button type="button" class="btn btn-danger fa fa-ban" routerLink='/list'>&nbsp;Cancel</button>
+      </div>
+    </div>
+    </div>
+</form>

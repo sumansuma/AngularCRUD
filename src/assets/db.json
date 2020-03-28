@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Suman",
+      "email": "suman@gmail.com",
+      "phone": "454454554",
+      "city": "Berhampur"
+    },
+    {
+      "id": "1",
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "phone": "6566454545454",
+      "city": "bbsr"
+    }
+  ]
+}
